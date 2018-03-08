@@ -1,5 +1,5 @@
 - name: Configure network device
-  hosts: vmx14
+  hosts: all
   connection: local
   gather_facts: False
   vars:
