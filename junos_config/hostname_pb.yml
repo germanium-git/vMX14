@@ -13,6 +13,6 @@
     - name: configure hostname
       junos_config:
         lines:
-          - set system host-name test_abc
+          - set system host-name "{{ inventory_hostname }}"
         #replace: yes
         provider: "{{ netconf }}"
