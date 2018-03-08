@@ -2,19 +2,9 @@
   hosts: vmx14
   connection: local
   gather_facts: False
-  vars_prompt:
-    - name: "netconf_user"
-      prompt: "Netconf login user"
-      default: "root"
-      private: no
-    - name: "netconf_password"
-      prompt: "Netconf login password"
-      private: yes
   vars:
     netconf:
       host: "{{ inventory_hostname }}"
-      username: "{{ netconf_user }}"
-      password: "{{ netconf_password }}"
       timeout: 30
       port: 22
 
