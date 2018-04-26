@@ -1,0 +1,8 @@
+<policy-options>
+    <prefix-list replace="replace">
+        <name>test-pl</name>
+        <prefix-list-item>
+            <name>2.2.2.2/32</name>
+        </prefix-list-item>
+    </prefix-list>
+</policy-options>

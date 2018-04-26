@@ -1,0 +1,23 @@
+- name: Configure network device
+  hosts: all
+  connection: local
+  gather_facts: False
+  vars:
+    netconf:
+      host: "{{ inventory_hostname }}"
+      timeout: 30
+      port: 22
+
+  tasks:
+    - name: configure prefix list
+      junos_config:
+        src: pref-list_replace.xml
+        update: replace
+        #override
+        #replace
+        src_format: xml
+        #set
+        #text
+        #json
+        comment: update config
+        provider: "{{ netconf }}"
