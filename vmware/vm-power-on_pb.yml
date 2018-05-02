@@ -1,12 +1,15 @@
----
 - name: Power on all vMX VMs
-  local_action:
-    module: vmware_guest
-    validate_certs: False
-    hostname: "{{ vcenter }}"
-    username: "{{ vmuser }}"
-    password: "{{ vmpassword }}"
-    name: "{{ vmname }}"
-    state: poweredon
-    datacenter: "{{ vmdc }}"
-    esxi_hostname: "{{ vmwarehost }}"
+  hosts: all
+  connection: local
+
+  tasks:
+    - name: configure prefix list
+      vmware_guest:
+        validate_certs: False
+        hostname: "{{ vcenter }}"
+        username: "{{ vmuser }}"
+        password: "{{ vmpassword }}"
+        name: "{{ vmname }}"
+        state: poweredon
+        datacenter: "{{ vmdc }}"
+        esxi_hostname: "{{ vmwarehost }}"
