@@ -3,13 +3,14 @@
   connection: local
 
   tasks:
-    - name: configure prefix list
-      vmware_guest:
-        validate_certs: False
+    - name: Set the state of a virtual machine to powered-on
+      vmware_guest_powerstate:
         hostname: "{{ vcenter }}"
         username: "{{ vmuser }}"
         password: "{{ vmpassword }}"
+        validate_certs: no
+        folder: "{{ vmdc }}"
         name: "{{ vmname }}"
-        state: poweredon
-        datacenter: "{{ vmdc }}"
-        esxi_hostname: "{{ vmwarehost }}"
+        state: powered-on
+      delegate_to: localhost
+      register: deploy
