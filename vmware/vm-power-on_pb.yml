@@ -12,4 +12,4 @@
         folder: "{{ vmdc }}"
         name: "{{ vmname }}"
         state: powered-on
-    register: deploy
+      register: deploy
