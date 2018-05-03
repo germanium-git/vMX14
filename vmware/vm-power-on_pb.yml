@@ -12,5 +12,4 @@
         folder: "{{ vmdc }}"
         name: "{{ vmname }}"
         state: powered-on
-      delegate_to: localhost
       register: deploy
