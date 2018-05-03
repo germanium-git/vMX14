@@ -3,7 +3,7 @@
   connection: local
 
   tasks:
-    - name: Set the state of a virtual machine to powered-on
+    - name: Set the state of a virtual machine to powered-off
       vmware_guest_powerstate:
         hostname: "{{ vcenter }}"
         username: "{{ vmuser }}"
@@ -11,5 +11,5 @@
         validate_certs: no
         folder: "{{ vmdc }}"
         name: "{{ vmname }}"
-        state: powered-on
+        state: powered-off
     register: deploy
