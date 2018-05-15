@@ -11,5 +11,5 @@
         validate_certs: no
         folder: "{{ vmdc }}"
         name: "{{ vmname }}"
-        state: powered-off
+        state: suspended
       register: deploy

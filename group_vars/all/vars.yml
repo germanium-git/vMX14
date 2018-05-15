@@ -1,0 +1,5 @@
+---
+vcenter: 10.20.30.40
+vmdc: MyDC
+vmuser: administrator@vsphere.local
+vmpassword: pass

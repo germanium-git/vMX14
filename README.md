@@ -20,3 +20,8 @@ ansible-playbook junos_config/pref-list_replace_xml_pb.yml -i hosts
     ...
 ```
 
+### Start/Stop Virtual Machines
+- Update group_vars/all/vars.yml with all required variables
+
+ansible-playbook vmware/vm-power-off_pb.yml -i hosts
+ansible-playbook vmware/vm-power-on_pb.yml -i hosts
