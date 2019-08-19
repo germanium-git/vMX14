@@ -1,0 +1,7 @@
+---
+- name: Configure network device
+  hosts: all
+  connection: local
+  gather_facts: False
+  roles:
+    - default
