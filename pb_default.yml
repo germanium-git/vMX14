@@ -3,5 +3,10 @@
   hosts: all
   connection: local
   gather_facts: False
+  vars:
+    netconf:
+      host: "{{ inventory_hostname }}"
+      timeout: 30
+      port: 22
   roles:
     - default

@@ -14,13 +14,8 @@
      src: "{{ role_path }}/templates/default.set.j2"
      dest: "{{ role_path }}/files/{{ inventory_hostname }}.set"
 
- - name: Configure hostname
+ - name: Configure default settings
    junos_config:
-     vars:
-       netconf:
-         host: "{{ inventory_hostname }}"
-         timeout: 60
-         port: 22
      src: "{{ role_path }}/files/{{ inventory_hostname }}.set"
      src_format:  set
      #replace: yes
