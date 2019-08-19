@@ -40,7 +40,7 @@ set interfaces ge-0/0/3 mac 00:01:ab:cd:f{{ index }}:03
 set interfaces ge-0/0/4 disable
 set interfaces ge-0/0/4 mac 00:01:ab:cd:f{{ index }}:04
 set interfaces ge-0/0/5 description "OOB Management - don't touch !!!"
-set interfaces ge-0/0/5 mac 00:01:ab:cd:f1:05
+set interfaces ge-0/0/5 mac 00:01:ab:cd:f{{ index }}:05
 set interfaces ge-0/0/5 unit 0 family inet address {{ ip_address }}/23
 set interfaces ge-0/0/6 description "Don't use - no vmware nic"
 set interfaces ge-0/0/6 disable
