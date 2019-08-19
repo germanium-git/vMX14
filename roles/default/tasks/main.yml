@@ -20,3 +20,4 @@
      src_format:  set
      #replace: yes
      provider: "{{ netconf }}"
+     comment: reset to default by AWX
