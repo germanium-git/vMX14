@@ -1,5 +1,6 @@
 - name: Power off all vMX VMs
   hosts: all
+  serial: 1
   connection: local
 
   tasks:
